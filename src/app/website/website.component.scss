@@ -1,0 +1,26 @@
+#website-root {
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    z-index: 1;
+    
+
+    background-image:url(/assets/website/background.png);
+    background-size: cover;
+    background-position: center ;
+
+    overflow:hidden;
+}
+
+.website-background {
+    position: absolute;
+    width: 300vw; 
+    height: 200vh; 
+    
+    top: 0;
+    left: -100vw; 
+    z-index: -1;
+
+    background: rgba(43, 43, 43, 0.95);
+    filter: blur(250px);
+}

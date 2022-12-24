@@ -1,0 +1,41 @@
+nav {
+    display:flex; 
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: relative;
+    z-index: 1001;
+
+    input{
+        color: white !important;
+    }
+
+    .nav-buttons{
+        margin-left: 1.5rem;
+    }
+
+    .right {
+        .cart{
+            margin-right: 0.5rem;
+        }
+        margin-left: auto;
+    }
+}
+
+.for-mobile {
+    display:none;
+}
+
+.mobile-menu {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.535);
+}
+
+@media(max-width: 650px){
+    .for-computer{
+        display:none;
+    }
+
+    .for-mobile{
+        display: block;
+    }
+}   
