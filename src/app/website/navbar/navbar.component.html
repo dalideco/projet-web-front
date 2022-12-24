@@ -1,14 +1,17 @@
 <nav>
+  <!-- search bar -->
   <mat-form-field>
     <input matInput placeholder="Search" value="" style="color: black" />
   </mat-form-field>
 
+  <!-- navbar buttons -->
   <div class="nav-buttons for-computer">
     <button mat-button color="primary">Accounts</button>
     <button mat-button color="primary">Keys</button>
     <button mat-button color="primary">Other</button>
   </div>
 
+  <!-- login and cart button -->
   <div class="right for-computer">
     <button mat-icon-button color="primary" class="cart">
       <fa-icon [icon]="faCartShopping"> </fa-icon>
@@ -16,17 +19,39 @@
     <button mat-raised-button color="primary">Login</button>
   </div>
 
+  <!-- menu button for mobile -->
   <div class="right for-mobile">
     <button mat-icon-button color="primary" (click)="toggleMobileMenu()">
-      <fa-icon [icon]="faBars" class="text-[20px]"></fa-icon>
+      <fa-icon
+        [icon]="faBars"
+        class="text-[20px]"
+        *ngIf="!displayMobileMenu"
+      ></fa-icon>
+      <fa-icon
+        [icon]="faXmark"
+        class="text-[20px]"
+        *ngIf="displayMobileMenu"
+      ></fa-icon>
+      
     </button>
   </div>
 </nav>
 
-<div class="for-mobile mobile-menu fixed w-full h-full top-0 left-0" *ngIf="displayMobileMenu">
+<!-- menu for mobile -->
+<div
+  class="for-mobile mobile-menu fixed w-full h-full top-0 left-0"
+  *ngIf="displayMobileMenu"
+>
   <div class="nav-buttons flex-col flex h-full justify-center">
     <button mat-button color="primary">Accounts</button>
     <button mat-button color="primary">Keys</button>
     <button mat-button color="primary">Other</button>
+
+    <div class="self-center mt-10">
+      <button mat-icon-button color="primary" class="cart !mr-2">
+        <fa-icon [icon]="faCartShopping"> </fa-icon>
+      </button>
+      <button mat-raised-button color="primary" class="!ml-2">Login</button>
+    </div>
   </div>
 </div>
