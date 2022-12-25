@@ -1,1 +1,37 @@
-<p>signup works!</p>
+<form [formGroup]="signupGroup">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      type="email"
+      formControlName="email"
+      placeholder="*****@***.***"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      type="password"
+      formControlName="password"
+      placeholder="*****@***.***"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Repeat Password</mat-label>
+    <input
+      matInput
+      type="password"
+      formControlName="repeatPassword"
+      placeholder="*****@***.***"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <button type="submit" mat-raised-button color="primary">Signup</button>
+  <a mat-raised-button color="secondary" routerLink="/auth/login"> Login </a>
+  <button type="submit" mat-button>Forgot password</button>
+</form>

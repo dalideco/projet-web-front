@@ -12,14 +12,14 @@ export function passwordVerif(): ValidatorFn {
     };
 
     for (const letter of [...value]) {
-      if (letter.toUpperCase() === letter) {
+      if (["<",">","!",":","^","$"].includes(letter)) {
+        verifications.hasSpecial=true;
+      } else if (isNumber(letter)) {
+        verifications.hasNumber = true;
+      } else if (letter.toUpperCase() === letter) {
         verifications.hasMaj = true;
       } else if (letter.toLowerCase() === letter) {
         verifications.hasMin = true;
-      } else if (isNumber(letter)) {
-        verifications.hasNumber = true;
-      } else {
-        verifications.hasSpecial = true;
       }
 
       if (
@@ -28,10 +28,10 @@ export function passwordVerif(): ValidatorFn {
         verifications.hasSpecial &&
         verifications.hasNumber
       ) {
+        console.log('returning null');
         return null;
       }
     }
-
     return { passwordIncomplete: { value } };
   };
 }
