@@ -9,6 +9,8 @@
   background-position: center;
 
   overflow: hidden;
+
+  @apply flex flex-col justify-center items-center;
 }
 
 .website-background {
@@ -29,4 +31,8 @@
 
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(7px);
+}
+
+.auth-container {
+    @apply w-11/12 relative z-10 max-w-[300px];
 }
