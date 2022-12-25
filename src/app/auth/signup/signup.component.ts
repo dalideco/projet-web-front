@@ -47,4 +47,8 @@ export class SignupComponent implements OnInit {
     return this.signupGroup.get('password')
   }
 
+  get repeatPassword() {
+    return this.signupGroup.get('repeatPassword')
+  }
+
 }

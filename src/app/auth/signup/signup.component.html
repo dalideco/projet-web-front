@@ -30,6 +30,21 @@
   </mat-form-field>
 
   <br />
+  <div class="errors text-[#9d9d9d] text-sm">
+    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+      <div *ngIf="email?.errors?.['required']">Email is required.</div>
+      <div *ngIf="email?.errors?.['email']">Email must be an email address</div>
+    </div>
+    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+      <div *ngIf="password?.errors?.['passwordIncomplete']">Password must contain one maj. one min. and one of the following: "!",":","^","$" </div>
+      <div *ngIf="password?.errors?.['minlength']"> Password must be at least 8 characters long </div>
+    </div>
+    <div *ngIf="signupGroup.errors?.['passwordNotMatching'] && (repeatPassword?.touched || repeatPassword?.dirty)" >
+        Passwords must match.
+    </div>    
+  </div>
+
+  <br>
 
   <button type="submit" mat-raised-button color="primary">Signup</button>
   <a mat-raised-button color="secondary" routerLink="/auth/login"> Login </a>

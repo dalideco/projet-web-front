@@ -12,7 +12,7 @@ export function passwordVerif(): ValidatorFn {
     };
 
     for (const letter of [...value]) {
-      if (["<",">","!",":","^","$"].includes(letter)) {
+      if (["!",":","^","$"].includes(letter)) {
         verifications.hasSpecial=true;
       } else if (isNumber(letter)) {
         verifications.hasNumber = true;
