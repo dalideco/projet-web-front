@@ -10,6 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { StoreOrGamePipe } from './store-or-game.pipe';
+import { ItemListComponent } from './home/item-list/item-list.component';
+import { ItemCardComponent } from './home/item-list/item-card/item-card.component';
+import { ItemTitlePipe } from './item-title.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { StoreOrGamePipe } from './store-or-game.pipe';
     NavbarComponent,
     CarouselComponent,
     StoreOrGamePipe,
+    ItemListComponent,
+    ItemCardComponent,
+    ItemTitlePipe,
   ],
   imports: [
     CommonModule,

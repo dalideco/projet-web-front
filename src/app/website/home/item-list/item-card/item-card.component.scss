@@ -1,0 +1,42 @@
+.container {
+  background: linear-gradient(
+    112.08deg,
+    rgba(255, 182, 182, 0.15) 27.35%,
+    rgba(255, 182, 182, 0.1) 74.74%
+  );
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+
+  height: 230px;
+
+  cursor: pointer; 
+
+  transition: transform 300ms ease;
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  @apply flex p-4;
+}
+
+img {
+    flex: 0.5;
+    border-radius: 8px;
+    @apply bg-[#00000037]
+}
+
+.content {
+    @apply flex-1 px-6 flex flex-col;
+}
+
+.games{
+    @apply mt-2 flex;
+    img {
+        @apply w-10 h-10 rounded-full mr-2;
+        flex: none;
+    }
+    
+}

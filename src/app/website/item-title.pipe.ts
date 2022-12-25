@@ -3,14 +3,16 @@ import ItemType from 'src/enums/ItemType.enum';
 import Item from 'src/models/item.model';
 
 @Pipe({
-  name: 'storeOrGame',
+  name: 'itemTitle'
 })
-export class StoreOrGamePipe implements PipeTransform {
+export class ItemTitlePipe implements PipeTransform {
+
   transform(value: Item, ...args: unknown[]): string {
-    if (value.type === ItemType.account) {
-      return value.store.image;
-    } else {
-      return value.games[0].image;
+    if(value.type === ItemType.account){
+      return value.store.title + " account"
+    }else{
+      return value.games[0].title + " key"
     }
   }
+
 }

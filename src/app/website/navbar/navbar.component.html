@@ -1,4 +1,4 @@
-<nav>
+<nav class="contained">
   <!-- search bar -->
   <mat-form-field>
     <input matInput placeholder="Search" value="" style="color: black" />
@@ -6,9 +6,9 @@
 
   <!-- navbar buttons -->
   <div class="nav-buttons for-computer">
-    <button mat-button color="primary">Accounts</button>
-    <button mat-button color="primary">Keys</button>
-    <button mat-button color="primary">Other</button>
+    <a mat-button color="primary">Accounts</a>
+    <a mat-button color="primary">Keys</a>
+    <a mat-button color="primary">Other</a>
   </div>
 
   <!-- login and cart button -->
@@ -16,7 +16,7 @@
     <button mat-icon-button color="primary" class="cart">
       <fa-icon [icon]="faCartShopping"> </fa-icon>
     </button>
-    <button mat-raised-button color="primary">Login</button>
+    <a mat-raised-button color="primary" routerLink="/auth">Login</a>
   </div>
 
   <!-- menu button for mobile -->
@@ -42,15 +42,15 @@
   *ngIf="displayMobileMenu"
 >
   <div class="nav-buttons flex-col flex h-full justify-center">
-    <button mat-button color="primary">Accounts</button>
-    <button mat-button color="primary">Keys</button>
-    <button mat-button color="primary">Other</button>
+    <a mat-button color="primary">Accounts</a>
+    <a mat-button color="primary">Keys</a>
+    <a mat-button color="primary">Other</a>
 
     <div class="self-center mt-10">
       <button mat-icon-button color="primary" class="cart !mr-2">
         <fa-icon [icon]="faCartShopping"> </fa-icon>
       </button>
-      <button mat-raised-button color="primary" class="!ml-2">Login</button>
+      <a mat-raised-button color="primary" class="!ml-2">Login</a>
     </div>
   </div>
 </div>

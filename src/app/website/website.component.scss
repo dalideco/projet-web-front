@@ -24,3 +24,7 @@
     background: rgba(43, 43, 43, 0.95);
     filter: blur(250px);
 }
+
+.scrollable {
+    @apply h-full overflow-y-auto ;
+}

@@ -1,0 +1,13 @@
+.items-container{
+    display:grid ; 
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem ;
+
+}
+
+@media(max-width: 700px){
+    .items-container {
+        display:flex;
+        flex-direction: column;
+    }
+}
