@@ -4,9 +4,9 @@ import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 export function passwordMatching(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     
-    const passowrd = control.get("password")
+    const password = control.get("password")
     const repeatPassword = control.get("repeatPassword")
 
-    return (passowrd === repeatPassword)? null: {passwordNotMatching: {value:true}}
+    return (password?.value === repeatPassword?.value)? null: {passwordNotMatching: {value:true}}
   };
 }

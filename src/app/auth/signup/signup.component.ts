@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
         Validators.minLength(8),
         passwordVerif()
       ])
-    },{validators: passwordMatching})
+    },{validators: passwordMatching()})
   }
 
   ngOnInit(): void {
