@@ -8,19 +8,23 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselComponent } from './home/carousel/carousel.component';
+import { StoreOrGamePipe } from './store-or-game.pipe';
 
 @NgModule({
   declarations: [
     HomeComponent,
     WebsiteComponent,
     NavbarComponent,
+    CarouselComponent,
+    StoreOrGamePipe,
   ],
   imports: [
     CommonModule,
     WebsiteRoutingModule,
     MatButtonModule,
     MatInputModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ]
 })
 export class WebsiteModule { }

@@ -6,6 +6,7 @@ import User from "./user.model";
 export default class Item {
     constructor(
         public id: number,
+        public title: string,
         public price: number,
         public description: string, 
         public type: ItemType,
