@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef,OnDestroy } from '@angu
 import Item from 'src/models/item.model';
 import ItemType from 'src/enums/ItemType.enum';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-carousel',
@@ -17,7 +18,7 @@ export class CarouselComponent implements OnInit,OnDestroy {
 
   selectedItem = 0;
 
-  constructor() {
+  constructor( private cart: CartService) {
     this.itemTypes= ItemType
   }
 
@@ -35,5 +36,9 @@ export class CarouselComponent implements OnInit,OnDestroy {
   }
 
   ngOnDestroy(): void {
+  }
+
+  addToCart(item:Item):void{
+    this.cart.add(item)
   }
 }

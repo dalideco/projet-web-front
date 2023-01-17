@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          <button mat-button class="self-start !mt-4">Add to cart <fa-icon [icon]="faPlus" ></fa-icon> </button>
+          <button mat-button class="self-start !mt-4" (click)="addToCart(item)">Add to cart <fa-icon [icon]="faPlus" ></fa-icon> </button>
 
           <!-- store -->
           <div *ngIf="item.type === itemTypes.gameKey" class="absolute right-5 bottom-5 flex items-center" >
