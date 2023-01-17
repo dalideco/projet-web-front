@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { passwordMatching } from '../validators/password-matching.directive';
 import { passwordVerif } from '../validators/password-verif.directive';
 import Swal from 'sweetalert2';

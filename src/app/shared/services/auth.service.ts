@@ -32,6 +32,7 @@ export class AuthService {
       map((user) => {
         // login successful if there's a jwt token in the response
         if (user && user.access_token) {
+          user.accessToken = user.access_token;
           localStorage.setItem('currentUser', JSON.stringify(user));
           this.currentUserSubject.next(user);
         }
@@ -48,7 +49,11 @@ export class AuthService {
   }
 
   signup(email: string, password: string) {
-	console.log(email,password)
-    return this.http.post<any>(this.url + 'signup', {email,password});
+    console.log(email, password);
+    return this.http.post<any>(this.url + 'signup', { email, password });
+  }
+
+  getUser() {
+    return this.http.get(this.url + 'profile');
   }
 }

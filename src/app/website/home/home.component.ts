@@ -1,6 +1,7 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ItemService } from 'src/app/shared/http/item.service';
+import { UserService } from 'src/app/shared/services/user.service';
 import Item from 'src/models/item.model';
 
 @Component({
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   subscriptions : Subscription[] =[];
 
-  constructor(private readonly items: ItemService) { }
+  constructor(private readonly items: ItemService, private readonly user: UserService) { }
 
   ngOnInit(): void {
     const subscription = this.items.getFeaturedItems().subscribe(items => {
