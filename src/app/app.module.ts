@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from './shared/shared.module';
+import { jwtInterceptorProvider } from './services/auth.jwtIntercepter';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,7 @@ import { SharedModule } from './shared/shared.module';
     FontAwesomeModule,
     SharedModule
   ],
-  providers: [],
+  providers: [jwtInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
