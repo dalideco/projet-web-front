@@ -13,6 +13,7 @@ import { StoreOrGamePipe } from './store-or-game.pipe';
 import { ItemListComponent } from './home/item-list/item-list.component';
 import { ItemCardComponent } from './home/item-list/item-card/item-card.component';
 import { ItemTitlePipe } from './item-title.pipe';
+import {MatChipsModule} from '@angular/material/chips'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ItemTitlePipe } from './item-title.pipe';
     MatButtonModule,
     MatInputModule,
     FontAwesomeModule,
+    MatChipsModule
   ]
 })
 export class WebsiteModule { }

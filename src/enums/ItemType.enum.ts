@@ -1,6 +1,6 @@
 enum ItemType {
-  account = 'account',
-  gameKey = 'key',
+  account = 'Account',
+  gameKey = 'Game key',
 }
 
 export default ItemType;

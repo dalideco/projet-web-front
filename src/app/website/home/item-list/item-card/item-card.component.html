@@ -1,12 +1,23 @@
 <div class="container">
-    <img [src]="item | storeOrGame" alt="">
-    <div class="content">
-        <h3> {{item | itemTitle}} </h3>
-        <p> {{item.description}} </p>
-        <h3 class="mt-auto"> {{item.price}}$ </h3>
+  <img [src]="item | storeOrGame" alt="" />
+  <div class="content">
+    <h3>{{ item | itemTitle }}</h3>
 
-        <div class="games">
-            <img *ngFor="let game of item.games.slice(0,3)" [src]="game.image" alt="">
-        </div>
+    <div class="chip-container">
+      <div class="chip">
+        {{ item.type }}
+      </div>
     </div>
+
+    <p>{{ item.description }}</p>
+    <h3 class="mt-auto">{{ item.price }}$</h3>
+
+    <div class="games" *ngIf="item.type === itemTypes.account">
+      <img
+        *ngFor="let game of item.games.slice(0, 3)"
+        [src]="game.image"
+        alt=""
+      />
+    </div>
+  </div>
 </div>

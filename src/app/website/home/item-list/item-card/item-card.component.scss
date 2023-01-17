@@ -11,6 +11,7 @@
   border-radius: 16px;
 
   min-height: 200px;
+  max-height: 250px;
 
   cursor: pointer; 
 
@@ -29,7 +30,7 @@
 img {
     flex: 0.5;
     border-radius: 8px;
-    @apply bg-[#00000037] w-2/5 object-cover;
+    @apply bg-[#00000037] w-2/5 object-contain;
 }
 
 .content {
@@ -39,8 +40,21 @@ img {
 .games{
     @apply mt-2 flex;
     img {
-        @apply w-10 h-10 rounded-full mr-2;
+        @apply w-10 h-10 rounded-full mr-2 object-cover;
         flex: none;
     }
     
+}
+
+.chip{
+  border-radius: 30px;
+  
+  @apply bg-[#F44336] py-1 px-2;
+
+  display:inline-block;
+  
+}
+
+.chip-container{
+  @apply my-3
 }
