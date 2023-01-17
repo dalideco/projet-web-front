@@ -16,6 +16,7 @@ import { ItemTitlePipe } from './item-title.pipe';
 import {MatChipsModule} from '@angular/material/chips'
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     StoreOrGamePipe,
     ItemListComponent,
     ItemCardComponent,
-    ItemTitlePipe
+    ItemTitlePipe,
+    CartComponent
   ],
   imports: [
     CommonModule,
