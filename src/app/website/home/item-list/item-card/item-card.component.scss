@@ -13,7 +13,7 @@
   min-height: 200px;
   max-height: 250px;
 
-  cursor: pointer; 
+  cursor: pointer;
 
   transition: transform 300ms ease;
   &:hover {
@@ -21,40 +21,48 @@
   }
   &:active {
     transform: translate(-10px) scale(0.9);
-    opacity: 0.7
+    opacity: 0.7;
   }
 
   @apply flex p-4;
 }
 
 img {
-    flex: 0.5;
-    border-radius: 8px;
-    @apply bg-[#00000037] w-2/5 object-contain;
+  flex: 0.5;
+  border-radius: 8px;
+  @apply bg-[#00000037] w-2/5 object-contain;
 }
 
 .content {
-    @apply flex-1 px-6 flex flex-col;
+  @apply flex-1 px-6 flex flex-col;
 }
 
-.games{
-    @apply mt-2 flex;
-    img {
-        @apply w-10 h-10 rounded-full mr-2 object-cover;
-        flex: none;
-    }
-    
+.games {
+  @apply mt-2 flex;
+  img {
+    @apply w-10 h-10 rounded-full mr-2 object-cover;
+    flex: none;
+  }
 }
 
-.chip{
+.chip {
   border-radius: 30px;
-  
+
   @apply bg-[#F44336] py-1 px-2;
 
-  display:inline-block;
-  
+  display: inline-block;
 }
 
-.chip-container{
-  @apply my-3
+.chip-container {
+  @apply my-3;
+}
+
+.more-images {
+  @apply w-10 h-10 rounded-full;
+  @apply flex justify-center items-center;
+  @apply bg-[#00000059];
+  p{
+    line-height: 0.2em;
+    transform: translateY(-0.2rem);
+  }
 }

@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     const subscription = this.items.getFeaturedItems().subscribe(items => {
+      console.log(items)
       if(items.length <=3){
         this.bigItems = items
         return

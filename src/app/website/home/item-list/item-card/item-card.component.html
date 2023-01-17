@@ -1,7 +1,7 @@
 <div class="container">
   <img [src]="item | storeOrGame" alt="" />
   <div class="content">
-    <h3>{{ item | itemTitle }}</h3>
+    <h4>{{ item | itemTitle }}</h4>
 
     <div class="chip-container">
       <div class="chip">
@@ -18,6 +18,9 @@
         [src]="game.image"
         alt=""
       />
+      <div class="more-images" *ngIf="item.games.length >= 3">
+        <p>...</p>
+      </div>
     </div>
   </div>
 </div>
