@@ -15,6 +15,7 @@ export class CartService {
   constructor() {}
 
   add(item: Item) {
+    if (this.cart.find((i) => i.id === item.id)) return;
     this.cartSubject.next([...this.cart, item]);
   }
 
