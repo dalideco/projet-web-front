@@ -13,7 +13,7 @@
 
   <!-- login and cart button -->
   <div class="right for-computer">
-    <button mat-icon-button color="primary" class="cart">
+    <button mat-icon-button [matBadge]="cartService.cart.length || undefined" color="primary" class="cart !mr-6">
       <fa-icon [icon]="faCartShopping"> </fa-icon>
     </button>
     <a
@@ -61,7 +61,7 @@
     <a mat-button color="primary">Keys</a>
 
     <div class="self-center mt-10">
-      <button mat-icon-button color="primary" class="cart !mr-2">
+      <button mat-icon-button color="primary" class="cart !mr-2" matBadge="4">
         <fa-icon [icon]="faCartShopping"> </fa-icon>
       </button>
       <a

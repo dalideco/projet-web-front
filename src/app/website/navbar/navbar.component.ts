@@ -5,6 +5,7 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { User } from 'src/types/user.model';
 
@@ -22,7 +23,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     public userService: UserService,
-    private readonly auth: AuthService
+    private readonly auth: AuthService,
+    public readonly cartService: CartService
   ) {}
 
   ngOnInit(): void {}
