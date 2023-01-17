@@ -13,7 +13,7 @@ export interface ApplicationUser {
   providedIn: 'root',
 })
 export class AuthService {
-  private currentUserSubject: BehaviorSubject<ApplicationUser | null>;
+  currentUserSubject: BehaviorSubject<ApplicationUser | null>;
   url = 'http://localhost:3000/auth/';
 
   constructor(private readonly http: HttpClient) {

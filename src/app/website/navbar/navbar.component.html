@@ -16,7 +16,21 @@
     <button mat-icon-button color="primary" class="cart">
       <fa-icon [icon]="faCartShopping"> </fa-icon>
     </button>
-    <a mat-raised-button color="primary" routerLink="/auth">Login</a>
+    <a
+      *ngIf="!userService.user"
+      mat-raised-button
+      color="primary"
+      routerLink="/auth"
+      >Login</a
+    >
+    <button
+      *ngIf="userService.user"
+      mat-raised-button
+      color="primary"
+      (click)="logout()"
+    >
+      Logout
+    </button>
   </div>
 
   <!-- menu button for mobile -->
@@ -50,7 +64,22 @@
       <button mat-icon-button color="primary" class="cart !mr-2">
         <fa-icon [icon]="faCartShopping"> </fa-icon>
       </button>
-      <a mat-raised-button color="primary" class="!ml-2" routerLink="/auth" >Login</a>
+      <a
+        *ngIf="!userService.user"
+        mat-raised-button
+        color="primary"
+        class="!ml-2"
+        routerLink="/auth"
+        >Login</a
+      >
+      <button
+        *ngIf="userService.user"
+        mat-raised-button
+        color="primary"
+        (click)="logout()"
+      >
+        Logout
+      </button>
     </div>
   </div>
 </div>

@@ -13,7 +13,16 @@ export class UserService {
   }
 
   constructor(private readonly auth: AuthService) {
-    this.auth.getUser().subscribe(
+    this.getUser();
+    this.auth.currentUserSubject.subscribe((value) => {
+      if (value === null) {
+        this.userSubject.next(null);
+      } else this.getUser();
+    });
+  }
+
+  getUser() {
+    return this.auth.getUser().subscribe(
       (user: any) => {
         this.userSubject.next(user);
       },
