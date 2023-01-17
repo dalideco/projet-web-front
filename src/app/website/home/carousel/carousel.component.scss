@@ -12,9 +12,15 @@
   @apply w-full h-full;
   @apply flex;
 
+  transition: transform 300ms ease;
+
   img {
     @apply w-1/4 object-contain;
     border-radius: 16px 0 0 16px;
+  }
+  &:active{
+    transform: scale(0.9);
+    opacity: 0.8;
   }
 }
 
