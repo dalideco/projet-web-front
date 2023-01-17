@@ -10,6 +10,7 @@
     </div>
 
     <p>{{ item.description }}</p>
+
     <h3 class="mt-auto">{{ item.price }}$</h3>
 
     <div class="games" *ngIf="item.type === itemTypes.account">
@@ -22,5 +23,7 @@
         <p>...</p>
       </div>
     </div>
+
+    <button mat-button class="!mt-2">Add to cart</button>
   </div>
 </div>

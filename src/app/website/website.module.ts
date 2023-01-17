@@ -14,6 +14,8 @@ import { ItemListComponent } from './home/item-list/item-list.component';
 import { ItemCardComponent } from './home/item-list/item-card/item-card.component';
 import { ItemTitlePipe } from './item-title.pipe';
 import {MatChipsModule} from '@angular/material/chips'
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import {MatChipsModule} from '@angular/material/chips'
     MatInputModule,
     FontAwesomeModule,
     MatChipsModule,
+    MatIconModule
   ]
 })
 export class WebsiteModule { }

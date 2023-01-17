@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef,OnDestroy } from '@angular/core';
 import Item from 'src/models/item.model';
 import ItemType from 'src/enums/ItemType.enum';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-carousel',
@@ -11,6 +12,8 @@ export class CarouselComponent implements OnInit,OnDestroy {
   @Input() items: Item[] = [];
   @ViewChild('scrollable') scrollable!: ElementRef;
   itemTypes:typeof ItemType;
+
+  faPlus = faPlus
 
   selectedItem = 0;
 

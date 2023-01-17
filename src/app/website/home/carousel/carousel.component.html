@@ -25,6 +25,8 @@
           <!-- price -->
           <h3 class="mt-auto">{{ item.price }}$</h3>
 
+
+
           <!-- list of games -->
           <div class="games" *ngIf="item.type === itemTypes.account">
             <img
@@ -36,6 +38,8 @@
               <p>...</p>
             </div>
           </div>
+
+          <button mat-button class="self-start !mt-4">Add to cart <fa-icon [icon]="faPlus" ></fa-icon> </button>
 
           <!-- store -->
           <div *ngIf="item.type === itemTypes.gameKey" class="absolute right-5 bottom-5 flex items-center" >
