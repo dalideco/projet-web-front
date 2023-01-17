@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef,OnDestroy } from '@angular/core';
 import Item from 'src/models/item.model';
+import ItemType from 'src/enums/ItemType.enum';
 
 @Component({
   selector: 'app-carousel',
@@ -9,10 +10,13 @@ import Item from 'src/models/item.model';
 export class CarouselComponent implements OnInit,OnDestroy {
   @Input() items: Item[] = [];
   @ViewChild('scrollable') scrollable!: ElementRef;
+  itemTypes:typeof ItemType;
 
   selectedItem = 0;
 
-  constructor() {}
+  constructor() {
+    this.itemTypes= ItemType
+  }
 
   ngOnInit(): void {}
 

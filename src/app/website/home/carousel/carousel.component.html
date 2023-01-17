@@ -1,19 +1,61 @@
 <div class="flex flex-col">
   <!-- carousel here -->
-  <div #scrollable class="flex overflow-x-auto snap-x snap-mandatory" >
-    <div *ngFor="let item of items" class="item-container contained snap-center">
+  <div #scrollable class="flex overflow-x-auto snap-x snap-mandatory">
+    <div
+      *ngFor="let item of items"
+      class="item-container contained snap-center"
+    >
       <div class="item">
         <img [src]="item | storeOrGame" alt="" class="item-image" />
         <div class="content">
+
+          <!-- title -->
           <h1>{{ item | itemTitle }}</h1>
+
+          <!-- type chip -->
+          <div class="chip-container">
+            <div class="chip">
+              {{ item.type }}
+            </div>
+          </div>
+
+          <!-- description -->
           <p>{{ item.description }}</p>
+
+          <!-- price -->
+          <h3 class="mt-auto">{{ item.price }}$</h3>
+
+          <!-- list of games -->
+          <div class="games" *ngIf="item.type === itemTypes.account">
+            <img
+              *ngFor="let game of item.games.slice(0, 10)"
+              [src]="game.image"
+              alt=""
+            />
+            <div class="more-images" *ngIf="item.games.length >= 10">
+              <p>...</p>
+            </div>
+          </div>
+
+          <!-- store -->
+          <div *ngIf="item.type === itemTypes.gameKey" class="absolute right-5 bottom-5 flex items-center" >
+            <div class="!pt-0 mr-2">{{item.store.title}} key</div>
+            <img [src]="item.store.image" alt="store image" class="w-7 h-7 object-cover">
+          </div>
+          
+
         </div>
+
       </div>
     </div>
   </div>
 
   <!-- buttons here -->
   <div class="buttons">
-    <button *ngFor="let item of items; let i=index;" class="{{(i === selectedItem) ? 'selected':''}}" (click)="setSelected(i)" ></button>
+    <button
+      *ngFor="let item of items; let i = index"
+      class="{{ i === selectedItem ? 'selected' : '' }}"
+      (click)="setSelected(i)"
+    ></button>
   </div>
 </div>
