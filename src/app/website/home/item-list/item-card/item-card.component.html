@@ -24,6 +24,21 @@
       </div>
     </div>
 
-    <button mat-button class="!mt-2" (click)="addToCart()" >Add to cart</button>
+    <button
+      *ngIf="!isInCart"
+      mat-button
+      class="!mt-2"
+      (click)="addToCart()"
+    >
+      Add to cart
+    </button>
+    <button
+      *ngIf="isInCart"
+      mat-button
+      class="!mt-2"
+      (click)="removeFromCart()"
+    >
+      Remove from cart
+    </button>
   </div>
 </div>

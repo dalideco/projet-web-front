@@ -16,9 +16,18 @@ export class ItemCardComponent implements OnInit {
     this.itemTypes = ItemType;
   }
 
+  public get isInCart():boolean {
+    return Boolean(this.cart.cart.find(i => i.id===this.item.id))
+  }
+
+ 
+
   ngOnInit(): void {}
 
   addToCart() {
     this.cart.add(this.item);
+  }
+  removeFromCart(){
+    this.cart.remove(this.item)
   }
 }
