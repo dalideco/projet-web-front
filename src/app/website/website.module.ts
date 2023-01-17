@@ -24,7 +24,7 @@ import {MatChipsModule} from '@angular/material/chips'
     StoreOrGamePipe,
     ItemListComponent,
     ItemCardComponent,
-    ItemTitlePipe,
+    ItemTitlePipe
   ],
   imports: [
     CommonModule,
@@ -32,7 +32,7 @@ import {MatChipsModule} from '@angular/material/chips'
     MatButtonModule,
     MatInputModule,
     FontAwesomeModule,
-    MatChipsModule
+    MatChipsModule,
   ]
 })
 export class WebsiteModule { }

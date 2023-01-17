@@ -19,8 +19,7 @@ import { jwtInterceptorProvider } from './services/auth.jwtIntercepter';
     MatInputModule,
     MatButtonModule,
     FontAwesomeModule,
-    SharedModule
-  ],
+    SharedModule  ],
   providers: [jwtInterceptorProvider],
   bootstrap: [AppComponent],
 })
