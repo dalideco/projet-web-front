@@ -18,7 +18,7 @@
     @apply w-1/4 object-contain bg-[#0000005a];
     border-radius: 16px 0 0 16px;
   }
-  &:active{
+  &:active {
     transform: scale(0.9);
     opacity: 0.8;
   }
@@ -29,7 +29,7 @@
   h1 {
     @apply text-5xl;
   }
-  p{
+  p {
     @apply pt-5;
   }
 }
@@ -88,4 +88,27 @@
 
 .chip-container {
   @apply my-3;
+}
+
+.custom-scroller {
+  /* width */
+  &::-webkit-scrollbar {
+    // width: 10px;
+    height: 2px
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: red;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
